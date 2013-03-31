@@ -35,6 +35,10 @@ For manual installation:
 
 1. Viewing system information.
 
+== How To Use ==
+
+Once installed and activated, simply go to Tools > SysInfo in your admin; that will display your system information. Also on that page you'll see a button near the top labeled "PHP Info". Clicking this will open a new browser window that displays all PHP-related information for your system.
+
 == Changelog ==
 
 = 1.0.0 =
