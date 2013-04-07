@@ -13,7 +13,7 @@ Useful system information about your WordPress install.
 ## Description 
 Use this plugin to view system information about your WordPress install. Things like the versions of WordPress, PHP, and MySQL, installed/activated plugins, the current theme, memory limit, allowable upload size, operating system, browser details, etc. This information would be very useful to many users and for people that need to provide support for their plugins and themes.
 
-= How To Use =
+### How To Use
 
 Once installed and activated, simply go to Tools > SysInfo in your admin; that will display your system information. Also on that page you'll see a button near the top labeled "PHP Info". Clicking this will open a new browser window that displays all PHP-related information for your system.
 
