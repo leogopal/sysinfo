@@ -199,8 +199,25 @@ class SysInfo {
 	function get_active_plugins() {
 		return get_option('active_plugins', array());
 	}
-}
 
+	/**
+	 * get_all_options 
+	 * not to be confused with the core deprecated get_alloptions
+	 */
+	function get_all_options() {
+		return wp_load_alloptions(); 
+	}
+
+
+	function options_have_transients($all_options) {
+		$transient_options = array(); 
+		 foreach( $all_options as $name => $value ) {
+		    if(stristr($name, 'transient')) {
+		    	$transient_options[$name] = $value;
+		    }
+		  }
+	}
+} // sysinfo class
 // Let's get this party started
 $sysinfo = new SysInfo();
 ?>
