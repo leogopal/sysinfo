@@ -5,6 +5,8 @@ $theme = wp_get_theme();
 $browser = $sysinfo->get_browser();
 $plugins = $sysinfo->get_all_plugins();
 $active_plugins = $sysinfo->get_active_plugins();
+$memory_limit = ini_get('memory_limit');
+$memory_usage = $sysinfo->get_memory_usage();
 ?>
 
 <div id="sysinfo">
@@ -42,8 +44,8 @@ Uploads Directory:      <?php echo ( defined('UPLOADS') ? UPLOADS : WP_CONTENT_D
 
 PHP cURL Support:       <?php echo (function_exists('curl_init')) ? _e('Yes', 'sysinfo') . "\n" : _e('No', 'sysinfo') . "\n"; ?>
 PHP GD Support:         <?php echo (function_exists('gd_info')) ? _e('Yes', 'sysinfo') . "\n" : _e('No', 'sysinfo') . "\n"; ?>
-PHP Memory Limit:       <?php echo ini_get('memory_limit') . "\n"; ?>
-PHP Memory Usage:       <?php echo ( function_exists( 'memory_get_usage' ) ? round( memory_get_usage() / 1024 / 1024, 2) : 0 ) . "M\n"; ?>
+PHP Memory Limit:       <?php echo $memory_limit . "\n"; ?>
+PHP Memory Usage:       <?php echo $memory_usage . "M (" . round( $memory_usage / $memory_limit * 100, 0 ) . "%)\n"; ?>
 PHP Post Max Size:      <?php echo ini_get('post_max_size') . "\n"; ?>
 PHP Upload Max Size:    <?php echo ini_get('upload_max_filesize') . "\n"; ?>
 
