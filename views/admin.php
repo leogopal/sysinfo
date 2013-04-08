@@ -36,6 +36,8 @@ Home URL:               <?php echo get_bloginfo('url') . "\n"; ?>
 
 Content Directory:      <?php echo WP_CONTENT_DIR . "\n"; ?>
 Content URL:            <?php echo WP_CONTENT_URL . "\n"; ?>
+Plugin Directory:       <?php echo WP_PLUGIN_DIR . "\n"; ?>
+Plugin URL:             <?php echo WP_PLUGIN_URL . "\n"; ?>
 
 PHP cURL Support:       <?php echo (function_exists('curl_init')) ? _e('Yes', 'sysinfo') . "\n" : _e('No', 'sysinfo') . "\n"; ?>
 PHP GD Support:         <?php echo (function_exists('gd_info')) ? _e('Yes', 'sysinfo') . "\n" : _e('No', 'sysinfo') . "\n"; ?>
