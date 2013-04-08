@@ -41,6 +41,7 @@ Content URL:            <?php echo WP_CONTENT_URL . "\n"; ?>
 Plugin Directory:       <?php echo WP_PLUGIN_DIR . "\n"; ?>
 Plugin URL:             <?php echo WP_PLUGIN_URL . "\n"; ?>
 Uploads Directory:      <?php echo ( defined('UPLOADS') ? UPLOADS : WP_CONTENT_DIR . '/uploads' ) . "\n"; ?>
+Cookie Domain:          <?php echo defined('COOKIE_DOMAIN') ? COOKIE_DOMAIN ? COOKIE_DOMAIN . "\n" : _e('Disabled', 'sysinfo') . "\n" : _e('Not set', 'sysinfo') . "\n" ?>
 
 PHP cURL Support:       <?php echo (function_exists('curl_init')) ? _e('Yes', 'sysinfo') . "\n" : _e('No', 'sysinfo') . "\n"; ?>
 PHP GD Support:         <?php echo (function_exists('gd_info')) ? _e('Yes', 'sysinfo') . "\n" : _e('No', 'sysinfo') . "\n"; ?>
