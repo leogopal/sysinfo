@@ -37,6 +37,7 @@ Home URL:               <?php echo get_bloginfo('url') . "\n"; ?>
 PHP cURL Support:       <?php echo (function_exists('curl_init')) ? _e('Yes', 'sysinfo') . "\n" : _e('No', 'sysinfo') . "\n"; ?>
 PHP GD Support:         <?php echo (function_exists('gd_info')) ? _e('Yes', 'sysinfo') . "\n" : _e('No', 'sysinfo') . "\n"; ?>
 PHP Memory Limit:       <?php echo ini_get('memory_limit') . "\n"; ?>
+PHP Memory Usage:       <?php echo ( function_exists( 'memory_get_usage' ) ? round( memory_get_usage() / 1024 / 1024, 2) : 0 ) . "M\n"; ?>
 PHP Post Max Size:      <?php echo ini_get('post_max_size') . "\n"; ?>
 PHP Upload Max Size:    <?php echo ini_get('upload_max_filesize') . "\n"; ?>
 
