@@ -34,6 +34,9 @@ Web Server:             <?php echo $_SERVER['SERVER_SOFTWARE'] . "\n"; ?>
 WordPress URL:          <?php echo get_bloginfo('wpurl') . "\n"; ?>
 Home URL:               <?php echo get_bloginfo('url') . "\n"; ?>
 
+Content Directory:      <?php echo WP_CONTENT_DIR . "\n"; ?>
+Content URL:            <?php echo WP_CONTENT_URL . "\n"; ?>
+
 PHP cURL Support:       <?php echo (function_exists('curl_init')) ? _e('Yes', 'sysinfo') . "\n" : _e('No', 'sysinfo') . "\n"; ?>
 PHP GD Support:         <?php echo (function_exists('gd_info')) ? _e('Yes', 'sysinfo') . "\n" : _e('No', 'sysinfo') . "\n"; ?>
 PHP Memory Limit:       <?php echo ini_get('memory_limit') . "\n"; ?>
