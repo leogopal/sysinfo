@@ -5,6 +5,9 @@ $theme = wp_get_theme();
 $browser = $sysinfo->get_browser();
 $plugins = $sysinfo->get_all_plugins();
 $active_plugins = $sysinfo->get_active_plugins();
+$all_options = $sysinfo->get_all_options(); 
+$transients_in_options = $sysinfo->options_have_transients($all_options); 
+
 ?>
 
 <div id="sysinfo">
@@ -67,6 +70,23 @@ foreach ($plugins as $plugin_path => $plugin) {
 }
 ?>
 				</textarea>
+			</div>
+			<div class="inside"> 
+					<h3> WordPress Options  </h3><br />
+				Total Number of Options: <?php echo count($all_options); ?> <br />
+				Size of all Options: <?php $serializedOptions = serialize($all_options); $option_bytes = mb_strlen($serializedOptions,'8bit'); echo $option_bytes; ?> bytes
+				<?php 
+					if(count($all_options) > 600) {
+						echo "<h4> You have too many options in the options table </h4>"; 
+					}
+
+					if($option_bytes > 200000) {
+						echo "<h4> You have more than 200k of options.. this is probably not good"; 
+					}
+				?>
+				<br />
+				Transients in DB?: <?php echo count($transients_in_options); ?>
+
 			</div>
 		</div>
 	</div>
