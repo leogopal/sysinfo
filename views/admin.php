@@ -50,6 +50,8 @@ PHP Post Max Size:      <?php echo ini_get('post_max_size') . "\n"; ?>
 PHP Upload Max Size:    <?php echo ini_get('upload_max_filesize') . "\n"; ?>
 
 WP_DEBUG:               <?php echo defined('WP_DEBUG') ? WP_DEBUG ? _e('Enabled', 'sysinfo') . "\n" : _e('Disabled', 'sysinfo') . "\n" : _e('Not set', 'sysinfo') . "\n" ?>
+SCRIPT_DEBUG:           <?php echo defined('SCRIPT_DEBUG') ? SCRIPT_DEBUG ? _e('Enabled', 'sysinfo') . "\n" : _e('Disabled', 'sysinfo') . "\n" : _e('Not set', 'sysinfo') . "\n" ?>
+SAVE_QUERIES:           <?php echo defined('SAVE_QUERIES') ? SAVE_QUERIES ? _e('Enabled', 'sysinfo') . "\n" : _e('Disabled', 'sysinfo') . "\n" : _e('Not set', 'sysinfo') . "\n" ?>
 Multi-Site Active:      <?php echo is_multisite() ? _e('Yes', 'sysinfo') . "\n" : _e('No', 'sysinfo') . "\n" ?>
 
 Operating System:       <?php echo $browser['platform'] . "\n"; ?>
