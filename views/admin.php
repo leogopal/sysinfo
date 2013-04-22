@@ -10,7 +10,7 @@ $active_plugins = $sysinfo->get_active_plugins();
 <div id="sysinfo">
 	<div class="wrap">
 		<div class="icon32">
-			<img src="<?php echo plugins_url('sysinfo/images/sysinfo.png') ?>" />
+			<img src="<?php echo SYSINFO_PLUGIN_URL ?>/images/sysinfo.png" />
 		</div>
 		
 		<h2 class="title"><?php _e('SysInfo', 'sysinfo') ?></h2>
@@ -23,7 +23,7 @@ $active_plugins = $sysinfo->get_active_plugins();
 			</div>
 			
 			<div class="inside">
-				<a class="button-primary" href="#" onclick="window.open('<?php echo plugins_url('sysinfo/views/phpinfo.php') ?>', 'PHPInfo', 'width=800, height=600, scrollbars=1'); return false;"><?php _e('PHP Info', 'sysinfo') ?></a>
+				<a class="button-primary" href="#" onclick="window.open('<?php echo SYSINFO_PLUGIN_URL ?>/views/phpinfo.php', 'PHPInfo', 'width=800, height=600, scrollbars=1'); return false;"><?php _e('PHP Info', 'sysinfo') ?></a>
 				
 				<textarea readonly="readonly" wrap="off">
 WordPress Version:      <?php echo get_bloginfo('version') . "\n"; ?>

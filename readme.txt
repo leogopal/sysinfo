@@ -5,7 +5,7 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 3.4
 Tested up to: 3.5.1
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 
 Useful system information about your WordPress install.
 
@@ -41,10 +41,13 @@ For manual installation:
 
 == Changelog ==
 
+= 1.1.0 =
+* Added markdown version of readme file (vidluther).
+
 = 1.0.0 =
 * Initial version.
 
 == Upgrade Notice ==
 
-= 1.0.0 =
+= 1.1.0 =
 We're fine. We're all fine here now, thank you. How are you?
