@@ -6,14 +6,15 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 3.4
 Tested up to: 3.5.1
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 
 Useful system information about your WordPress install.
 
 ## Description 
+
 Use this plugin to view system information about your WordPress install. Things like the versions of WordPress, PHP, and MySQL, installed/activated plugins, the current theme, memory limit, allowable upload size, operating system, browser details, etc. This information would be very useful to many users and for people that need to provide support for their plugins and themes.
 
-### How To Use
+## How To Use
 
 Once installed and activated, simply go to Tools > SysInfo in your admin; that will display your system information. Also on that page you'll see a button near the top labeled "PHP Info". Clicking this will open a new browser window that displays all PHP-related information for your system.
 
@@ -41,5 +42,3 @@ For installation via git clone:
 1. ssh to wp-content/plugins folder of your website
 1. git clone git://github.com/davedonaldson/WordPress-SysInfo.git sysinfo
 1. Log in to WordPress and activate the plugin.
-
-
