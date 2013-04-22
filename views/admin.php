@@ -7,6 +7,10 @@ $plugins = $sysinfo->get_all_plugins();
 $active_plugins = $sysinfo->get_active_plugins();
 $memory_limit = ini_get('memory_limit');
 $memory_usage = $sysinfo->get_memory_usage();
+$all_options = $sysinfo->get_all_options();
+$all_options_serialized = serialize($all_options);
+$all_options_bytes = round(mb_strlen($all_options_serialized, '8bit') / 1024, 2);
+$all_options_transients = $sysinfo->get_transients_in_options($all_options);
 ?>
 
 <div id="sysinfo">
@@ -52,10 +56,13 @@ PHP Memory Usage:       <?php echo $memory_usage . "M (" . round($memory_usage /
 PHP Post Max Size:      <?php echo ini_get('post_max_size') . "\n"; ?>
 PHP Upload Max Size:    <?php echo ini_get('upload_max_filesize') . "\n"; ?>
 
+WP Options Count:       <?php echo count($all_options) . "\n"; ?>
+WP Options Size:        <?php echo $all_options_bytes . "kb\n" ?>
+WP Options Transients:  <?php echo count($all_options_transients) . "\n"; ?>
+
 WP_DEBUG:               <?php echo defined('WP_DEBUG') ? WP_DEBUG ? _e('Enabled', 'sysinfo') . "\n" : _e('Disabled', 'sysinfo') . "\n" : _e('Not set', 'sysinfo') . "\n" ?>
 SCRIPT_DEBUG:           <?php echo defined('SCRIPT_DEBUG') ? SCRIPT_DEBUG ? _e('Enabled', 'sysinfo') . "\n" : _e('Disabled', 'sysinfo') . "\n" : _e('Not set', 'sysinfo') . "\n" ?>
 SAVEQUERIES:            <?php echo defined('SAVEQUERIES') ? SAVEQUERIES ? _e('Enabled', 'sysinfo') . "\n" : _e('Disabled', 'sysinfo') . "\n" : _e('Not set', 'sysinfo') . "\n" ?>
-
 AUTOSAVE_INTERVAL:      <?php echo defined('AUTOSAVE_INTERVAL') ? AUTOSAVE_INTERVAL ? AUTOSAVE_INTERVAL . "\n" : _e('Disabled', 'sysinfo') . "\n" : _e('Not set', 'sysinfo') . "\n" ?>
 WP_POST_REVISIONS:      <?php echo defined('WP_POST_REVISIONS') ? WP_POST_REVISIONS ? WP_POST_REVISIONS . "\n" : _e('Disabled', 'sysinfo') . "\n" : _e('Not set', 'sysinfo') . "\n" ?>
 

@@ -206,6 +206,24 @@ class SysInfo {
 	function get_memory_usage() {
 		return round(memory_get_usage() / 1024 / 1024, 2);
 	}
+
+	function get_all_options() {
+		// Not to be confused with the core deprecated get_alloptions
+		
+		return wp_load_alloptions();
+	}
+
+	function get_transients_in_options($options) {
+		$transients = array();
+
+		foreach ($options as $name => $value) {
+			if (stristr($name, 'transient')) {
+				$transients[$name] = $value;
+			}
+		}
+		
+		return $transients;
+	}
 }
 
 // Let's get this party started

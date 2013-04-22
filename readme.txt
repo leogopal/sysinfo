@@ -45,6 +45,7 @@ For manual installation:
 * Added markdown version of readme file (vidluther).
 * Added constants for plugin name, directory, and url which replaced the plugins_url call with a hardcoded string (davedonaldson).
 * Added directories and urls of content/plugins/uploads, as well as settings info for cookie domain, memory usage, script debug, save queries, autosave interval, and WP post revisions (japh).
+* Added info for WP options count, options size, and number of transients in options (vidluther).
 
 = 1.0.0 =
 * Initial version.
