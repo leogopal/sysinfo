@@ -194,6 +194,10 @@ class SysInfo {
 			'pattern' => $pattern
 		);
 	}
+
+	function get_memory_usage() {
+		return ( function_exists( 'memory_get_usage' ) ? round( memory_get_usage() / 1024 / 1024, 2) : 0 );
+	}
 	
 	function get_all_plugins() {
 		return get_plugins();
