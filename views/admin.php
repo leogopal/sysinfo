@@ -5,6 +5,8 @@ $theme = wp_get_theme();
 $browser = $sysinfo->get_browser();
 $plugins = $sysinfo->get_all_plugins();
 $active_plugins = $sysinfo->get_active_plugins();
+$memory_limit = ini_get('memory_limit');
+$memory_usage = $sysinfo->get_memory_usage();
 ?>
 
 <div id="sysinfo">
@@ -34,13 +36,27 @@ Web Server:             <?php echo $_SERVER['SERVER_SOFTWARE'] . "\n"; ?>
 WordPress URL:          <?php echo get_bloginfo('wpurl') . "\n"; ?>
 Home URL:               <?php echo get_bloginfo('url') . "\n"; ?>
 
+Content Directory:      <?php echo WP_CONTENT_DIR . "\n"; ?>
+Content URL:            <?php echo WP_CONTENT_URL . "\n"; ?>
+Plugin Directory:       <?php echo WP_PLUGIN_DIR . "\n"; ?>
+Plugin URL:             <?php echo WP_PLUGIN_URL . "\n"; ?>
+Uploads Directory:      <?php echo ( defined('UPLOADS') ? UPLOADS : WP_CONTENT_DIR . '/uploads' ) . "\n"; ?>
+Cookie Domain:          <?php echo defined('COOKIE_DOMAIN') ? COOKIE_DOMAIN ? COOKIE_DOMAIN . "\n" : _e('Disabled', 'sysinfo') . "\n" : _e('Not set', 'sysinfo') . "\n" ?>
+
 PHP cURL Support:       <?php echo (function_exists('curl_init')) ? _e('Yes', 'sysinfo') . "\n" : _e('No', 'sysinfo') . "\n"; ?>
 PHP GD Support:         <?php echo (function_exists('gd_info')) ? _e('Yes', 'sysinfo') . "\n" : _e('No', 'sysinfo') . "\n"; ?>
-PHP Memory Limit:       <?php echo ini_get('memory_limit') . "\n"; ?>
+PHP Memory Limit:       <?php echo $memory_limit . "\n"; ?>
+PHP Memory Usage:       <?php echo $memory_usage . "M (" . round( $memory_usage / $memory_limit * 100, 0 ) . "%)\n"; ?>
 PHP Post Max Size:      <?php echo ini_get('post_max_size') . "\n"; ?>
 PHP Upload Max Size:    <?php echo ini_get('upload_max_filesize') . "\n"; ?>
 
 WP_DEBUG:               <?php echo defined('WP_DEBUG') ? WP_DEBUG ? _e('Enabled', 'sysinfo') . "\n" : _e('Disabled', 'sysinfo') . "\n" : _e('Not set', 'sysinfo') . "\n" ?>
+SCRIPT_DEBUG:           <?php echo defined('SCRIPT_DEBUG') ? SCRIPT_DEBUG ? _e('Enabled', 'sysinfo') . "\n" : _e('Disabled', 'sysinfo') . "\n" : _e('Not set', 'sysinfo') . "\n" ?>
+SAVEQUERIES:            <?php echo defined('SAVEQUERIES') ? SAVEQUERIES ? _e('Enabled', 'sysinfo') . "\n" : _e('Disabled', 'sysinfo') . "\n" : _e('Not set', 'sysinfo') . "\n" ?>
+
+AUTOSAVE_INTERVAL:      <?php echo defined('AUTOSAVE_INTERVAL') ? AUTOSAVE_INTERVAL ? AUTOSAVE_INTERVAL . "\n" : _e('Disabled', 'sysinfo') . "\n" : _e('Not set', 'sysinfo') . "\n" ?>
+WP_POST_REVISIONS:      <?php echo defined('WP_POST_REVISIONS') ? WP_POST_REVISIONS ? WP_POST_REVISIONS . "\n" : _e('Disabled', 'sysinfo') . "\n" : _e('Not set', 'sysinfo') . "\n" ?>
+
 Multi-Site Active:      <?php echo is_multisite() ? _e('Yes', 'sysinfo') . "\n" : _e('No', 'sysinfo') . "\n" ?>
 
 Operating System:       <?php echo $browser['platform'] . "\n"; ?>
