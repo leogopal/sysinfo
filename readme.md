@@ -33,12 +33,12 @@ For manual installation:
 
 1. You should have access to the server where WordPress is installed. If you don't, contact your hosting provider.
 1. Copy the plugin zip file up to your server and unzip it somewhere on the file system.
-1. Copy the "sysinfo" folder into the /wp-content/plugins directory of your WordPress installation.
+1. Copy the `sysinfo` folder into the `wp-content/plugins` directory of your WordPress installation.
 1. Login to your website and go to the Plugins section of your admin panel.
 1. Look for "SysInfo" and click Activate.
 
 For installation via git clone:
 
-1. ssh to wp-content/plugins folder of your website
-1. git clone git://github.com/davedonaldson/WordPress-SysInfo.git sysinfo
+1. ssh to `wp-content/plugins` folder of your website
+1. `git clone git://github.com/davedonaldson/WordPress-SysInfo.git sysinfo`
 1. Log in to WordPress and activate the plugin.
