@@ -1,11 +1,12 @@
 === SysInfo ===
-Contributors: arcware, tommcfarlin
+Contributors: leogopal
+Author:  leogopal
 Tags: system, system info, system information, php info
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 3.4
-Tested up to: 3.5.1
-Stable tag: 1.1.0
+Tested up to: 4.2.1
+Stable tag: 1.1.1
 
 Useful system information about your WordPress install.
 
@@ -41,15 +42,8 @@ For manual installation:
 
 == Changelog ==
 
-= 1.2.0 =
-
-* Localized strings in the admin view (tommcfarlin)
-* Converted all stylesheets to LESS and output a compressed version of the plugin's stylesheet (tommcfarlin)
-* Brought the core plugin file up to WordPress coding conventions (tommcfarlin)
-* Implemented the plugin as a singleton pattern (tommcfarlin)
-* Documented all of the functions in the core plugin file (tommcfarlin)
-* Added terminating comments to the end of the elements in the markup (tommcfarlin)
-* Added font (Monospace) for OS X machines (tommcfarlin)
+= 1.1.1 =
+* Minor refactoring.
 
 = 1.1.0 =
 * Added markdown version of readme file (vidluther).
