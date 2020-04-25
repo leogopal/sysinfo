@@ -1,12 +1,13 @@
 ## SysInfo
-
-Contributors: arcware,
+Contributors: leogopal,
 Tags: system, system info, system information, php info
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 3.4
 Tested up to: 3.5.1
-Stable tag: 1.1.0
+Stable tag: 1.2.0
+
+[![DOWNLOADS](https://img.shields.io/npm/dt/sysinfo?label=DOWNLOADS%20%20❯&colorA=6A788D&colorB=6A788D&style=flat)](https://www.npmjs.com/package/wp-continuous-deployment) 
 
 Useful system information about your WordPress install.
 
@@ -36,9 +37,3 @@ For manual installation:
 1. Copy the "sysinfo" folder into the /wp-content/plugins directory of your WordPress installation.
 1. Login to your website and go to the Plugins section of your admin panel.
 1. Look for "SysInfo" and click Activate.
-
-For installation via git clone:
-
-1. ssh to wp-content/plugins folder of your website
-1. git clone git://github.com/davedonaldson/WordPress-SysInfo.git sysinfo
-1. Log in to WordPress and activate the plugin.

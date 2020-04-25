@@ -1,16 +1,17 @@
 === SysInfo ===
 Contributors: leogopal
-Author:  leogopal
-Tags: system, system info, system information, php info
+Author: leogopal
+Tags: system, system info, server details, system information, php info
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 3.4
-Tested up to: 4.2.1
-Stable tag: 1.1.1
+Tested up to: 5.4.0
+Stable tag: 1.2.0
 
 Useful system information about your WordPress install.
 
 == Description ==
+
 Use this plugin to view system information about your WordPress install. Things like the versions of WordPress, PHP, and MySQL, installed/activated plugins, the current theme, memory limit, allowable upload size, operating system, browser details, etc. This information would be very useful to many users and for people that need to provide support for their plugins and themes.
 
 = How To Use =
